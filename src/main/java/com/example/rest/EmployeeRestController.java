@@ -4,10 +4,7 @@ import com.example.dao.EmployeeDAO;
 import com.example.entity.Employee;
 import com.example.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,6 +30,14 @@ public class EmployeeRestController {
             throw new RuntimeException("Employee id not found - "+id);
         }
         return employeeService.findById(id);
+    }
+
+    @PostMapping("/employees")
+    public Employee addEmployee(@RequestBody Employee employee){
+        employee.setId(0);
+        Employee newEmployee = employeeService.save(employee);
+
+        return newEmployee;
     }
 
 
