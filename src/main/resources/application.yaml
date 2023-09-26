@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5332/crud
+    url: jdbc:postgresql://localhost:5332/crud?createDatabaseIfNotExist=true
     username: yerkebulan
     password: password
   jpa:
