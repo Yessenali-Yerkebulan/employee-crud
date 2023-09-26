@@ -1,6 +1,5 @@
 package com.example.rest;
 
-import com.example.dao.EmployeeDAO;
 import com.example.entity.Employee;
 import com.example.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
