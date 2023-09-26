@@ -17,3 +17,9 @@ spring:
     show-sql: true
   main:
     web-application-type: servlet
+  data:
+    rest:
+      base-path:
+        /api/v1
+      default-page-size:
+        3
